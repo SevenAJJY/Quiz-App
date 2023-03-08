@@ -1,0 +1,190 @@
+/************ Fonts *************/
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+/************ Variables *************/
+
+ :root {
+    --hue: 39;
+    --satueation: 83%;
+    --lightness: 54%;
+    --main-color: hsl(var(--hue), var(--satueation), var(--lightness));
+    --main-color-dcv: hsl(var(--hue) var(--satueation) var(--lightness) / 82%);
+    --main-color-light: hsl(var(--hue) var(--satueation) var(--lightness) / 31%);
+    --main-color-x-light: hsl(var(--hue) var(--satueation) var(--lightness) / 12%);
+    --gradient-hover-img: to bottom, hsl(var(--hue) var(--satueation) var(--lightness) / 1%) 0, hsl(var(--hue) var(--satueation) var(--lightness) / 25%) 25%, hsl(var(--hue) var(--satueation) var(--lightness) / 80%) 75%, hsl(var(--hue) var(--satueation) var(--lightness) / 100%) 100%;
+    /************ Text Colors *************/
+    --text-white: hsl(0, 0%, 100%);
+    --text-light-gray: hsl(0, 0%, 96%);
+    --text-x-dark-gray: hsl(0, 0%, 10%);
+    --text-dark-gray: hsl(0, 0%, 20%);
+    /************ bg Colors *************/
+    --body-bg-color: hsl(var(--hue), 60%, 94%);
+    --bg-color: hsl(var(--hue), 60%, 96%);
+    --bg-white: hsl(0, 0%, 100%);
+    /************ Border Colors *************/
+    --border-color: hsl(var(--hue), 48%, 80%);
+    /************ shadow Colors *************/
+    --shadow: 0 0 10px hsla(var(--hue), 57%, 63%, 0.3);
+    --focus-shadow: 0 0 10px hsla(var(--hue), 57%, 63%, 0.6);
+    /************ font size *************/
+    --fs-4xl: 50px;
+    --fs-3xl: 35px;
+    --fs-2xl: 26px;
+    --fs-xl: 20px;
+    --fs-lg: 18px;
+    --fs-md: 16px;
+    --fs-sm: 14px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #0d1110 url('../imgs/codder.png');
+    background-position: right bottom;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* Start Container */
+
+.container {
+    max-width: 1170px;
+    margin: auto;
+    padding: 15px;
+}
+
+
+/* End Container */
+
+
+/* Start Grid */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 30px;
+}
+
+
+/* ENd Grid */
+
+
+/* Start Header */
+
+.header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    background: #0d1110;
+    text-align: center;
+    box-shadow: 0 0 2px var(--main-color);
+}
+
+.header .logo a {
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1;
+    display: block;
+    transform: scale(0.9);
+    letter-spacing: 2px;
+    color: var(--main-color);
+    font-family: inherit;
+}
+
+.header .logo a span {
+    font-size: 12px;
+    font-weight: 500;
+    color: #ffffff;
+    letter-spacing: 1px;
+    text-align: center;
+    position: relative;
+}
+
+.header .logo a span::before {
+    content: "";
+    position: absolute;
+    background: transparent;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border-top: 2px solid #ffffff;
+    border-right: 2px solid transparent;
+    border-left: 0px solid transparent;
+}
+
+.header .logo a span::after {
+    content: "";
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #ffffff;
+    width: 8px;
+    height: 8px;
+    box-shadow: 0px 0px 5px var(--main-color);
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    z-index: 9;
+}
+
+
+/* End Header */
+
+
+/* Start Title */
+
+.title-box {
+    color: #eba829;
+    padding: 100px 0;
+}
+
+.title-box .section-title {
+    text-align: center;
+}
+
+.title-box .section-title span {
+    display: inline-block;
+    font-size: var(--fs-2xl);
+    font-weight: 500;
+    text-transform: capitalize;
+    margin: 0 0 12px;
+    padding: 0 40px;
+    position: relative;
+}
+
+.title-box .section-title span:before,
+.title-box .section-title span:after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 30px;
+    background-color: var(--main-color);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.title-box .section-title span:before {
+    left: 0;
+}
+
+.title-box .section-title span:after {
+    right: 0;
+}
+
+
+/* End Title */
