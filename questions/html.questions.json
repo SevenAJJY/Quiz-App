@@ -1,0 +1,171 @@
+[{
+        "num": 1,
+        "question": "Why We Use <br> Element",
+        "answer_1": "To Make Text Bold",
+        "answer_2": "To Make Text Italic",
+        "answer_3": "To Add Breakline",
+        "answer_4": "To Make Horizontal Line",
+        "right_anwser": "To Add Breakline"
+    },
+    {
+        "num": 2,
+        "question": "Is <img> Element Has Attribute href",
+        "answer_1": "Yes",
+        "answer_2": "No Its Fot Anchor Tag <a>",
+        "answer_3": "All Element Has This Attribute",
+        "answer_4": "Answer 1 And 3 Is Right",
+        "right_anwser": "No Its Fot Anchor Tag <a>"
+    },
+    {
+        "num": 3,
+        "question": "How Can We Make Element Text Bold",
+        "answer_1": "Putting It Inside <b> Tag",
+        "answer_2": "Putting It Inside <Strong> Tag",
+        "answer_3": "Customizing It With Font-weight Property In CSS",
+        "answer_4": "All Answer Is Right",
+        "right_anwser": "All Answer Is Right"
+    },
+    {
+        "num": 4,
+        "question": "What does HTML stand for?",
+        "answer_1": "Hyper Text Markup Language",
+        "answer_2": "Home Tool Markup Language",
+        "answer_3": "Hyperlinks and Text Markup Language",
+        "answer_4": "Answer 1 And 3 Is Right",
+        "right_anwser": "Hyper Text Markup Language"
+    },
+    {
+        "num": 5,
+        "question": "Choose the correct HTML element for the largest heading:",
+        "answer_1": "<head>",
+        "answer_2": "<h6>",
+        "answer_3": "<heading>",
+        "answer_4": "<h1>",
+        "right_anwser": "<h1>"
+    },
+    {
+        "num": 6,
+        "question": "What is the correct HTML element for inserting a line break?",
+        "answer_1": "<lb>",
+        "answer_2": "<br>",
+        "answer_3": "<hr>",
+        "answer_4": "<break>",
+        "right_anwser": "<br>"
+    },
+    {
+        "num": 7,
+        "question": "What is the correct HTML for adding a background color?",
+        "answer_1": "<body bg='yellow'>",
+        "answer_2": "<background>yellow</background>",
+        "answer_3": "<body style=\"background-color:yellow;\">",
+        "answer_4": "background=\"blue\"",
+        "right_anwser": "<body style=\"background-color:yellow;\">"
+    },
+    {
+        "num": 8,
+        "question": "Choose the correct HTML element to define important text",
+        "answer_1": "<strong>",
+        "answer_2": "<i>",
+        "answer_3": "<b>",
+        "answer_4": "<important>",
+        "right_anwser": "<strong>"
+    },
+    {
+        "num": 9,
+        "question": "What is the correct HTML for creating a hyperlink?",
+        "answer_1": "<a>https://github.com/SevenAJJY</a>",
+        "answer_2": "<a url=\"https://github.com/SevenAJJY\">SevenAJJY</a>",
+        "answer_3": "<a name=\"https://github.com/SevenAJJY\">SevenAJJY</a>",
+        "answer_4": "<a href=\"https://github.com/SevenAJJY\">SevenAJJY</a>",
+        "right_anwser": "<a href=\"https://github.com/SevenAJJY\">SevenAJJY</a>"
+    },
+    {
+        "num": 10,
+        "question": "Which character is used to indicate an end tag?",
+        "answer_one": ">",
+        "answer_two": "/",
+        "answer_three": "^",
+        "answer_four": "_",
+        "right_anwser": "/"
+    }, {
+        "num": 11,
+        "question": "How can you make a bulleted list?",
+        "answer_one": "<dl>",
+        "answer_two": "<ul>",
+        "answer_three": "<list>",
+        "answer_four": "<ol>",
+        "right_anwser": "<ul>"
+    }, {
+        "num": 12,
+        "question": "What is the correct HTML for making a checkbox?",
+        "answer_one": "<input type=\"check\">",
+        "answer_two": "<check>",
+        "answer_three": "<input type=\"checkbox\">",
+        "answer_four": "<check>",
+        "right_anwser": "<input type=\"checkbox\">"
+    }, {
+        "num": 13,
+        "question": "What is the correct HTML for making a text input field?",
+        "answer_one": "<textfield>",
+        "answer_two": "<input type=\"textfield\">",
+        "answer_three": "<input type=\"text\">",
+        "answer_four": "<inputtext type=\"text\">",
+        "right_anwser": "<input type=\"text\">"
+    }, {
+        "num": 14,
+        "question": "What is the correct HTML for making a drop-down list?",
+        "answer_one": "<select>",
+        "answer_two": "<input type=\"dropdown\">",
+        "answer_three": "<input type=\"list\">",
+        "answer_four": "<dropdown>",
+        "right_anwser": "<select>"
+    }, {
+        "num": 15,
+        "question": "Which HTML element defines the title of a document?",
+        "answer_one": "<title>",
+        "answer_two": "<pagetitle>",
+        "answer_three": "<meta>",
+        "answer_four": "<head>",
+        "right_anwser": "<title>"
+    }, {
+        "num": 16,
+        "question": "Which HTML element is used to specify a footer for a document or section?",
+        "answer_one": "<footer>",
+        "answer_two": "<sectionfooter>",
+        "answer_three": "<bottom>",
+        "answer_four": "<section>",
+        "right_anwser": "<footer>"
+    }, {
+        "num": 17,
+        "question": "In HTML, onblur and onfocus are:",
+        "answer_one": "Style attributes",
+        "answer_two": "Event attributes",
+        "answer_three": "HTML Elements",
+        "answer_four": "All Answer Is Right",
+        "right_anwser": "Event attributes"
+    }, {
+        "num": 18,
+        "question": "In HTML, which attribute is used to specify that an input field must be filled out?",
+        "answer_one": "formavalidation",
+        "answer_two": "placeholder",
+        "answer_three": "required",
+        "answer_four": "validate",
+        "right_anwser": "required"
+    }, {
+        "num": 19,
+        "question": "Which input type defines a slider control in HTML?",
+        "answer_one": "controls",
+        "answer_two": "range",
+        "answer_three": "slider",
+        "answer_four": "search",
+        "right_anwser": "range"
+    }, {
+        "num": 20,
+        "question": "Which HTML element is used to specify a header for a document or section?",
+        "answer_one": "<head>",
+        "answer_two": "<headerSection>",
+        "answer_three": "<top>",
+        "answer_four": "<header>",
+        "right_anwser": "<header>"
+    }
+]
