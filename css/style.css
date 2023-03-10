@@ -341,11 +341,20 @@ button.btn {
     padding-right: 10px;
     font-size: var(--fs-lg);
     color: var(--main-color);
+    align-self: flex-start;
+    padding-top: 2px;
 }
 
 .info-box .info-body .info {
     margin: 10px 0;
     font-size: var(--fs-md);
+    display: flex;
+    align-items: center;
+}
+
+.info-box .info-body .info div span {
+    color: var(--main-color);
+    font-weight: 500;
 }
 
 .info-box .info-footer {
@@ -374,6 +383,7 @@ button.btn {
     transform: translate(-50%, -50%) scale(0.5);
     width: 800px;
     transition: transform .5s ease;
+    overflow: hidden;
 }
 
 .quiz-box.activeQuiz {
@@ -393,6 +403,7 @@ button.btn {
     align-items: center;
     padding: 0 30px;
     box-shadow: 0 3px 5px 1px rgb(0 0 0 / 10%);
+    position: relative;
 }
 
 .g-quiz header .quiz-category div {
@@ -434,6 +445,16 @@ button.btn {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.g-quiz header .time-line {
+    position: absolute;
+    width: 0%;
+    height: 4px;
+    left: 0;
+    bottom: 0;
+    background-color: var(--main-color);
+    border-radius: 4px;
 }
 
 .quiz-box .g-quiz section {
@@ -521,7 +542,7 @@ span.checked:before {
 .g-quiz footer .spans span {
     width: 25px;
     height: 25px;
-    background-color: var(--main-color-x-light);
+    background-color: var(--main-color-light);
     border-radius: 50%;
     margin-right: 5px;
 }
@@ -530,5 +551,25 @@ span.checked:before {
     background-color: var(--main-color);
 }
 
+.g-quiz footer .spans span.current {
+    background-color: var(--main-color);
+    animation: changeColor 1s linear infinite;
+}
+
+@keyframes changeColor {
+    50% {
+        background-color: var(--main-color-light);
+    }
+    100% {
+        background-color: var(--main-color);
+    }
+}
+
 
 /* End Quiz */
+
+
+/* Start Result Box */
+
+
+/* End Result Box */

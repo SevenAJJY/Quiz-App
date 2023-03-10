@@ -11,13 +11,14 @@ const optionList = document.querySelector('.option-list');
 const nextBtn = document.querySelector('.submit-button .next-btn');
 const spans = document.querySelector('.spans');
 const timeCount = quizBox.querySelector('.time-sec');
-// const timeLine = quizBox.querySelector('.time-line');
+const timeLine = quizBox.querySelector('.time-line');
 const timeOff = quizBox.querySelector('.time-text');
 
-let qCount, counter;
+let qCount, counter, counterLine;
 let currentIndex = 0;
 let userScore = 0;
 const timeValue = 15;
+let widthValue = 0;
 
 // If Start Quiz Button Clicked
 buttonsStartQuiz.forEach((btn) => {
@@ -63,6 +64,7 @@ function getQuestions(selectedCategory) {
                 getCategoryName(selectedCategory);
                 createCircles();
                 startTimer(timeValue);
+                stratTimerLine(widthValue);
                 // If Click On Submit Button
 
                 nextBtn.onclick = function() {
@@ -75,6 +77,8 @@ function getQuestions(selectedCategory) {
                     HandleCircles();
                     clearInterval(counter);
                     startTimer(timeValue);
+                    clearInterval(counterLine);
+                    stratTimerLine(widthValue);
                 }
             }
         }
@@ -142,7 +146,7 @@ function createCircles() {
     for (let i = 1; i <= qCount; i++) {
         let span = document.createElement('span');
         if (i == 1) {
-            span.className = 'on';
+            span.className = 'current';
         }
         spans.appendChild(span);
     }
@@ -153,6 +157,9 @@ function HandleCircles() {
     let arrayOfSpans = Array.from(allSpans);
     arrayOfSpans.forEach((span, index) => {
         if (index === currentIndex) {
+            span.className = 'current';
+        }
+        if (index < currentIndex) {
             span.className = 'on';
         }
     });
@@ -163,10 +170,28 @@ function startTimer(time) {
 
     function timer() {
         timeCount.textContent = time < 10 ? `0${time}` : time;
+        if (time < 5) {
+            timeCount.style.backgroundColor = 'red';
+        } else {
+            timeCount.style.backgroundColor = 'var(--main-color)';
+        }
         time--;
         if (time < 0) {
             timeOff.textContent = 'Time Off';
             clearInterval(counter);
+            nextBtn.click();
+        }
+    }
+}
+
+function stratTimerLine(time) {
+    counterLine = setInterval(timer, 20);
+
+    function timer() {
+        time += 1;
+        timeLine.style.width = `${time}px`;
+        if (time > 800) {
+            clearInterval(counterLine);
         }
     }
 }
