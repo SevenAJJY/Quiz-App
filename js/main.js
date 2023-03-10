@@ -5,15 +5,19 @@ const quizBox = document.querySelector('.quiz-box');
 const buttonsStartQuiz = document.querySelectorAll('.quiz-footer button');
 const exitBtn = document.querySelector('.info-footer .exit');
 const continueBtn = document.querySelector('.info-footer .start');
-const allRadioButton = document.querySelectorAll('input[name="question"]');
 const answerSpan = document.querySelector('.answer span');
 const questionTitle = document.querySelector('.question span');
 const optionList = document.querySelector('.option-list');
 const nextBtn = document.querySelector('.submit-button .next-btn');
 const spans = document.querySelector('.spans');
+const timeCount = quizBox.querySelector('.time-sec');
+// const timeLine = quizBox.querySelector('.time-line');
+const timeOff = quizBox.querySelector('.time-text');
 
-let qCount;
+let qCount, counter;
 let currentIndex = 0;
+let userScore = 0;
+const timeValue = 15;
 
 // If Start Quiz Button Clicked
 buttonsStartQuiz.forEach((btn) => {
@@ -58,10 +62,19 @@ function getQuestions(selectedCategory) {
                 addQuestions(questions[currentIndex]);
                 getCategoryName(selectedCategory);
                 createCircles();
+                startTimer(timeValue);
+                // If Click On Submit Button
+
                 nextBtn.onclick = function() {
+                    // Get Right Answer
+                    let correctAns = questions[currentIndex].right_anwser;
+                    console.log(correctAns);
                     currentIndex++;
+                    checkAnswer(correctAns);
                     addQuestions(questions[currentIndex]);
                     HandleCircles();
+                    clearInterval(counter);
+                    startTimer(timeValue);
                 }
             }
         }
@@ -70,6 +83,24 @@ function getQuestions(selectedCategory) {
     xhttp.send();
 }
 
+
+function checkAnswer(correctAns) {
+    let answers = document.querySelectorAll('[name="question"]');
+    let theChoosenAnswer;
+
+    answers.forEach((answer) => {
+        if (answer.checked) {
+            theChoosenAnswer = answer.dataset.answer;
+        }
+    });
+
+    if (correctAns == theChoosenAnswer) {
+        userScore++;
+    }
+    console.log(userScore);
+}
+
+
 function getCategoryName(name) {
     let catNameContainer = document.querySelector('.quiz-category div span');
     catNameContainer.innerHTML = name;
@@ -77,6 +108,7 @@ function getCategoryName(name) {
 
 function addQuestions(questions) {
     if (qCount > currentIndex) {
+        // Remove Previous Question
         questionTitle.textContent = '';
         optionList.innerHTML = '';
         questionTitle.textContent = questions.question;
@@ -121,8 +153,20 @@ function HandleCircles() {
     let arrayOfSpans = Array.from(allSpans);
     arrayOfSpans.forEach((span, index) => {
         if (index === currentIndex) {
-            console.log(span);
             span.className = 'on';
         }
     });
+}
+
+function startTimer(time) {
+    counter = setInterval(timer, 1000);
+
+    function timer() {
+        timeCount.textContent = time < 10 ? `0${time}` : time;
+        time--;
+        if (time < 0) {
+            timeOff.textContent = 'Time Off';
+            clearInterval(counter);
+        }
+    }
 }
