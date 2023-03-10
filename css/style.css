@@ -496,6 +496,7 @@ input[type="radio"]:checked+span {
     background: var(--main-color-light);
 }
 
+input[type="radio"]:checked+span::before,
 span.checked:before {
     box-shadow: inset 0 0 0 8px var(--main-color) !important;
 }
