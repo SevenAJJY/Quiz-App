@@ -13,10 +13,14 @@ const spans = document.querySelector('.spans');
 const timeCount = quizBox.querySelector('.time-sec');
 const timeLine = quizBox.querySelector('.time-line');
 const timeOff = quizBox.querySelector('.time-text');
+const preLoader = quizBox.querySelector('.pre-loader');
 const resultBox = document.querySelector('.result-box');
+const tryAgainBtn = resultBox.querySelector('.buttons-container .try-again');
+const checkYourAnswer = resultBox.querySelector('.check-answer');
 
 
-let qCount, counter, counterLine;
+let qCount, counter, counterLine, timeOut;
+let cSelected;
 let currentIndex = 0;
 let userScore = 0;
 const timeValue = 15;
@@ -54,26 +58,23 @@ function getQuestions(selectedCategory) {
                 // Add Question
                 addQuestions(questions[currentIndex]);
                 getCategoryName(selectedCategory);
+                cSelected = selectedCategory;
                 createCircles();
                 startTimer(timeValue);
                 stratTimerLine(widthValue);
                 // If Click On Submit Button
-
                 nextBtn.onclick = function() {
-                    if (qCount - 1 > currentIndex) {
+                    if (qCount > currentIndex) {
                         // Get Right Answer
                         let correctAns = questions[currentIndex].right_anwser;
                         currentIndex++;
                         checkAnswer(correctAns);
-                        addQuestions(questions[currentIndex]);
+                        addQuestions(questions[currentIndex], selectedCategory);
                         HandleCircles();
                         clearInterval(counter);
                         startTimer(timeValue);
                         clearInterval(counterLine);
                         stratTimerLine(widthValue);
-                    } else {
-                        // Quiz completed
-                        showResult(selectedCategory);
                     }
                 }
             }
@@ -81,6 +82,10 @@ function getQuestions(selectedCategory) {
     }
     xhttp.open('GET', `questions/${selectedCategory}.questions.json`);
     xhttp.send();
+}
+
+tryAgainBtn.onclick = () => {
+    window.location.reload();
 }
 
 
@@ -93,8 +98,7 @@ function checkAnswer(correctAns) {
             theChoosenAnswer = answer.dataset.answer;
         }
     });
-    console.log(correctAns);
-    console.log(theChoosenAnswer);
+
     if (correctAns == theChoosenAnswer) {
         userScore++;
     }
@@ -104,39 +108,67 @@ function checkAnswer(correctAns) {
 function getCategoryName(name) {
     let catNameContainer = document.querySelector('.quiz-category div span');
     catNameContainer.innerHTML = name;
-    return name;
+    return true;
 }
 
-function addQuestions(questions) {
-    // Remove Previous Question
-    questionTitle.textContent = '';
-    optionList.innerHTML = '';
-    questionTitle.textContent = questions.question;
-    let i = 1;
-    while (i <= 4) {
-        let mainLabel = document.createElement('label');
-        mainLabel.className = 'answer';
-        mainLabel.htmlFor = `answer_${i}`;
-        let input = document.createElement('input');
-        input.setAttribute('type', 'radio');
-        input.setAttribute('name', 'question');
-        input.setAttribute('id', `answer_${i}`);
-        input.dataset.answer = questions[`answer_${i}`];
-        // Make first option checked
-        if (i === 1) {
-            input.setAttribute('checked', true);
-        }
-        let span = document.createElement('span');
-        let spanText = document.createTextNode(questions[`answer_${i}`]);
-        span.appendChild(spanText);
-        mainLabel.appendChild(input);
-        mainLabel.appendChild(span);
-        // Append All Divs To Answers Area
-        optionList.appendChild(mainLabel);
-        i++;
+function loaderButton(selectedCategory) {
+    document.querySelector(".loader-btn").onclick = () => {
+        nextBtn.innerHTML = "<div class='loader'></div>";
+        timeOut = setTimeout(() => {
+            // Quiz completed
+            showResult(selectedCategory);
+        }, 3000);
     }
-
 }
+
+function complatedQuiz(sCategory) {
+    if (qCount == currentIndex) {
+        optionList.parentElement.remove();
+        timeCount.parentElement.remove();
+        timeLine.remove();
+        nextBtn.innerHTML = 'Show Result';
+        nextBtn.classList.add('loader-btn');
+        loaderButton(sCategory);
+        clearTimeout(timeOut);
+    }
+}
+
+function addQuestions(questions, selectedCategory) {
+
+    if (questions != undefined) {
+        // Remove Previous Question
+        questionTitle.textContent = '';
+        optionList.innerHTML = '';
+        questionTitle.textContent = questions.question;
+        let i = 1;
+        while (i <= 4) {
+            let mainLabel = document.createElement('label');
+            mainLabel.className = 'answer';
+            mainLabel.htmlFor = `answer_${i}`;
+            let input = document.createElement('input');
+            input.setAttribute('type', 'radio');
+            input.setAttribute('name', 'question');
+            input.setAttribute('id', `answer_${i}`);
+            input.dataset.answer = questions[`answer_${i}`];
+            // Make first option checked
+            if (i === 1) {
+                input.setAttribute('checked', true);
+            }
+            let span = document.createElement('span');
+            let spanText = document.createTextNode(questions[`answer_${i}`]);
+            span.appendChild(spanText);
+            mainLabel.appendChild(input);
+            mainLabel.appendChild(span);
+            // Append All Divs To Answers Area
+            optionList.appendChild(mainLabel);
+            i++;
+        }
+    }
+    // If Quiz Completed
+    complatedQuiz(selectedCategory);
+}
+
+
 
 function createCircles() {
     for (let i = 1; i <= qCount; i++) {
@@ -204,11 +236,36 @@ function calcAccuracy() {
     const progValue = resultBox.querySelector('.prog-value');
     const circularProgress = resultBox.querySelector('.circular-progress');
     const numQuestions = resultBox.querySelectorAll('.prog-accuracy .qCount span');
+    const adviceText = resultBox.querySelector('.advice-text p');
+    let sVal = 0;
+    let eVal, progAcc;
+
     numQuestions[0].textContent = userScore;
     numQuestions[1].textContent = qCount;
-    let accuracy = (userScore * 100) / qCount;
-    progValue.textContent = `${accuracy}%`;
-    circularProgress.style.background = `conic-gradient(var(--main-color) ${accuracy * 3.6}deg, #ededed 0deg)`;
+    eVal = (userScore * 100) / qCount;
+    adviceText.innerHTML = getAdvice(eVal);
+
+    progAcc = setInterval(progEvent, 40);
+
+    function progEvent() {
+        progValue.textContent = `${sVal}%`;
+        sVal++;
+        circularProgress.style.background = `conic-gradient(var(--main-color) ${sVal * 3.6}deg, #ededed 0deg)`;
+        if (sVal > eVal) {
+            clearInterval(progAcc);
+        }
+    }
+
 }
 
-// TODO:: Check Number of question and calcAccuracy;
+function getAdvice(accuracy) {
+    let adv = "";
+    if (accuracy < 50) {
+        adv = "<strong>Bad!</strong> You must study much harder!";
+    } else if (accuracy < 85) {
+        adv = "<strong>Almost!</strong> Study a little more and take the test again!";
+    } else {
+        adv = "<strong>perfect!</strong> You can be proud of yourself!";
+    }
+    return adv;
+}

@@ -11,6 +11,14 @@
 </head>
 
 <body>
+    <!-- Start Pre-loader -->
+    <!-- <div class="pre-loader">
+        <div class="logo">
+            <a href="#">seven<span>ajjy</span></a>
+        </div>
+        <div class="loader"></div>
+    </div> -->
+    <!-- End Pre-loader -->
 
     <!-- Start Game Wrapper -->
     <div class="game-wrapper">
@@ -36,7 +44,7 @@
         <!-- End Title Section -->
 
         <!-- Start Category of Quiz -->
-        <section class="categories-box">
+        <section class="categories-box hide">
             <div class="container">
                 <div class="grid">
                     <div class="category">
@@ -142,14 +150,20 @@
                     </section>
                     <footer>
                         <div class="submit-button">
-                            <button class="next-btn btn">Next Que</button>
+                            <button class="next-btn btn">
+                                Next Que
+                            </button>
                         </div>
                         <div class="spans">
                         </div>
                     </footer>
                 </div>
+            </div>
         </section>
         <!-- End Quiz -->
+
+
+
         <!-- Start Result Box -->
         <section class="result-box ">
             <div class="container">
@@ -166,7 +180,7 @@
                             <img src="./imgs/ad3.png" />
                         </div>
                         <div class="advice-text">
-                            <p><strong>Almost!</strong> Study a little more and take the test again!</p>
+                            <p></p>
                         </div>
                     </div>
                     <div class="buttons-container">
@@ -179,10 +193,62 @@
         </section>
         <!-- End Result Box -->
 
-        </div>
-        <!-- End Game Wrapper -->
+        <!-- Start Check Your Answer Section -->
+        <section class="checkAnswer-box">
+            <div class="container">
+                <div class="g-quiz">
+                    <header>
+                        <div class="quiz-category">
+                            <div>category: <span></span></div>
+                        </div>
+                        <div class="user-score">
+                            <div class="score">
+                                Score: <span>5</span> Of <span>10</span>
+                            </div>
+                        </div>
+                    </header>
+                    <section>
+                        <div class="question">
+                            <i class="fa-solid fa-circle-chevron-right"></i>
+                            <span>Why We Use &lt;br&gt; Element</span>
+                        </div>
+                        <div class="option-list">
+                            <label class="answer" for="answer_1">
+                                <input type="radio" name="question" id="answer_1" data-answer="Yes" checked="true">
+                                <span>To Make Horizontal Line</span>
+                            </label>
+                            <label class="answer" for="answer_1">
+                                <input type="radio" name="question" id="answer_1" data-answer="Yes" checked="true">
+                                <span>To Make Horizontal Line</span>
+                            </label>
+                            <label class="answer" for="answer_1">
+                                <input type="radio" name="question" id="answer_1" data-answer="Yes" checked="true">
+                                <span>To Make Horizontal Line</span>
+                            </label>
+                            <label class="answer" for="answer_1">
+                                <input type="radio" name="question" id="answer_1" data-answer="Yes" checked="true">
+                                <span>To Make Horizontal Line</span>
+                            </label>
+                        </div>
+                    </section>
+                    <footer>
+                        <div class="submit-button">
+                            <button class="next-btn btn">
+                                Next Que
+                            </button>
+                        </div>
+                        <div class="spans">
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </section>
+        <!-- End Check Your Answer Section -->
 
-        <script src="./js/main.js"></script>
+    </div>
+    <!-- End Game Wrapper -->
+
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
