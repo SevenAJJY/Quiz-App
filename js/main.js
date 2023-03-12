@@ -276,7 +276,7 @@ function calcAccuracy() {
     function progEvent() {
         progValue.textContent = `${sVal}%`;
         sVal++;
-        circularProgress.style.background = `conic-gradient(var(--main-color) ${sVal * 3.6}deg, #ededed 0deg)`;
+        circularProgress.style.background = `conic-gradient(var(--main-color) ${sVal * 3.6}deg, #d9d9d9  0deg)`;
         if (sVal > eVal) {
             clearInterval(progAcc);
         }
@@ -299,3 +299,77 @@ function getAdvice(accuracy) {
 tryAgainBtn.onclick = () => {
     window.location.reload();
 }
+
+/**
+ * Style Switcher 
+ */
+
+
+const styleSwitcherToggle = () => {
+    const styleSwitcher = document.querySelector('.js-style-switcher');
+    const styleSwitcherToggler = document.querySelector('.js-style-switcher-toggler');
+
+    styleSwitcherToggler.addEventListener('click', function() {
+        styleSwitcher.classList.toggle('open');
+        this.querySelector('i').classList.toggle("fa-times");
+        this.querySelector('i').classList.toggle("fa-gear");
+    });
+}
+
+
+const themeColor = () => {
+    const hueSlider = document.querySelector('.js-hue-slider');
+    const html = document.querySelector('html');
+
+    const setHue = (value) => {
+        html.style.setProperty('--hue', value);
+        document.querySelector('.js-hue').textContent = value;
+    }
+
+    hueSlider.addEventListener("input", (e) => {
+        setHue(e.target.value);
+        window.localStorage.setItem('--HUE', e.target.value);
+    });
+
+    const slider = (value) => {
+        hueSlider.value = value;
+    }
+
+    if (window.localStorage.getItem('--HUE') !== null) {
+        setHue(window.localStorage.getItem('--HUE'));
+        slider(window.localStorage.getItem('--HUE'));
+    } else {
+        const hue = getComputedStyle(html).getPropertyValue('--hue');
+        setHue(hue);
+        slider(hue.split(" ").join(""));
+    }
+}
+
+
+const themeLightDark = () => {
+    const darkModeCheckbox = document.querySelector('.js-dark-mode');
+
+    const themeMode = () => {
+        if (localStorage.getItem('theme-dark') !== "false") {
+            document.body.classList.remove('t-dark');
+        } else {
+            document.body.classList.add('t-dark');
+        }
+    }
+
+    darkModeCheckbox.addEventListener('click', function() {
+        localStorage.setItem('theme-dark', this.checked);
+        themeMode();
+    });
+
+    if (localStorage.getItem('theme-dark') !== null) {
+        themeMode();
+    }
+    if (document.body.classList.contains('t-dark')) {
+        darkModeCheckbox.checked = true;
+    }
+}
+
+styleSwitcherToggle();
+themeColor();
+themeLightDark();

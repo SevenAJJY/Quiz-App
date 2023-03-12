@@ -52,6 +52,19 @@ body {
     height: 100vh;
 }
 
+body.t-dark {
+    /************ Text Colors *************/
+    --text-x-dark-gray: hsl(0, 0%, 94%);
+    --text-dark-gray: hsl(0, 0%, 84%);
+    /************ bg Colors *************/
+    --body-bg-color: hsl(var(--hue), 20%, 10%);
+    --bg-color: hsl(var(--hue), 13%, 17%);
+    /************ Border Colors *************/
+    --border-color: hsl(var(--hue), 15%, 30%);
+    /************ shadow Colors *************/
+    --shadow: 0 0 10px hsla(var(--hue), 19%, 7%, 0.9);
+}
+
 a {
     text-decoration: none;
 }
@@ -159,7 +172,7 @@ a {
 .pre-loader .loader {
     width: 135px;
     height: 2px;
-    background: var(--bg-white);
+    background: var(--bg-color);
     position: relative;
     overflow: hidden;
 }
@@ -322,7 +335,7 @@ a {
 .category {
     grid-column: span 4;
     padding: 20px;
-    background: #fff;
+    background: var(--bg-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -342,7 +355,7 @@ a {
 .category .quiz-header i {
     width: 70px;
     height: 70px;
-    background: var(--main-color-light);
+    background: var(--main-color-x-light);
     color: var(--main-color);
     border-radius: 51% 49% 49% 51% / 37% 36% 64% 63%;
     display: flex;
@@ -402,7 +415,7 @@ button.btn {
     position: absolute;
     top: 50%;
     left: 50%;
-    background-color: var(--bg-white);
+    background-color: var(--bg-color);
     border-radius: 6px;
     opacity: 0;
     pointer-events: none;
@@ -434,6 +447,7 @@ button.btn {
 .info-box .info-header span {
     font-size: 22px;
     font-weight: 500;
+    color: var(--text-x-dark-gray);
 }
 
 .info-box .info-body {
@@ -454,6 +468,7 @@ button.btn {
     font-size: var(--fs-md);
     display: flex;
     align-items: center;
+    color: var(--text-x-dark-gray);
 }
 
 .info-box .info-body .info div span {
@@ -480,7 +495,7 @@ button.btn {
     position: absolute;
     top: 60%;
     left: 50%;
-    background-color: var(--bg-white);
+    background-color: var(--bg-color);
     border-radius: 6px;
     opacity: 0;
     pointer-events: none;
@@ -512,6 +527,7 @@ button.btn {
 
 .g-quiz header .quiz-category div {
     font-size: var(--fs-sm);
+    color: var(--text-x-dark-gray);
 }
 
 .g-quiz header .quiz-category div>span {
@@ -534,6 +550,7 @@ button.btn {
 .g-quiz header .timer .time-text {
     font-size: var(--fs-sm);
     margin-right: 10px;
+    color: var(--text-x-dark-gray);
 }
 
 .g-quiz header .timer .time-sec {
@@ -570,6 +587,7 @@ button.btn {
     font-weight: 500;
     display: flex;
     align-items: center;
+    color: var(--text-x-dark-gray);
 }
 
 .g-quiz section .question i {
@@ -604,11 +622,12 @@ button.btn {
     transition: .25s ease;
     padding: 10px 20px 10px 10px;
     border-radius: 31px;
+    color: var(--text-x-dark-gray);
 }
 
 .g-quiz .option-list .answer span:before {
     content: "";
-    background-color: #fff;
+    background-color: var(--bg-color);
     width: 25px;
     height: 25px;
     border-radius: 50%;
@@ -675,7 +694,7 @@ span.checked:before {
 .g-quiz footer .spans span {
     width: 25px;
     height: 25px;
-    background-color: var(--main-color-light);
+    background-color: var(--main-color-x-light);
     border-radius: 50%;
 }
 
@@ -690,7 +709,7 @@ span.checked:before {
 
 @keyframes changeColor {
     50% {
-        background-color: var(--main-color-light);
+        background-color: var(--main-color-x-light);
     }
     100% {
         background-color: var(--main-color);
@@ -707,7 +726,7 @@ span.checked:before {
     position: absolute;
     top: 58%;
     left: 50%;
-    background-color: var(--bg-white);
+    background-color: var(--bg-color);
     border-radius: 6px;
     opacity: 0;
     pointer-events: none;
@@ -733,6 +752,7 @@ span.checked:before {
     font-size: var(--fs-2xl);
     font-weight: 500;
     border-bottom: 1px solid var(--border-color);
+    color: var(--text-x-dark-gray);
 }
 
 .quiz-result h3 span {
@@ -757,7 +777,7 @@ span.checked:before {
     height: 130px;
     width: 130px;
     border-radius: 50%;
-    background: conic-gradient(var(--main-color) 3.6deg, #ededed 0deg);
+    background: conic-gradient(var(--main-color) 3.6deg, #d9d9d9 0deg);
 }
 
 .quiz-result .prog-accuracy .circular-progress:before {
@@ -768,7 +788,7 @@ span.checked:before {
     transform: translate(-50%, -50%);
     height: 100px;
     width: 100px;
-    background-color: #fff;
+    background-color: var(--bg-color);
     border-radius: 50%;
 }
 
@@ -782,7 +802,7 @@ span.checked:before {
 
 .quiz-result .prog-accuracy div {
     font-size: var(--fs-lg);
-    color: #b2b6ce;
+    color: var(--text-x-dark-gray);
     text-align: center;
     display: block;
     margin-top: 15px
@@ -794,7 +814,7 @@ span.checked:before {
 }
 
 .quiz-result .advice {
-    background-color: var(--main-color-light);
+    background-color: var(--main-color-x-light);
     border-left: 15px solid var(--main-color);
     border-radius: 10px;
     display: flex;
@@ -820,6 +840,7 @@ span.checked:before {
 
 .quiz-result .advice .advice-text p {
     font-size: var(--fs-sm);
+    color: var(--text-x-dark-gray);
 }
 
 .quiz-result .buttons-container {
