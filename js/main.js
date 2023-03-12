@@ -13,10 +13,11 @@ const spans = document.querySelector('.spans');
 const timeCount = quizBox.querySelector('.time-sec');
 const timeLine = quizBox.querySelector('.time-line');
 const timeOff = quizBox.querySelector('.time-text');
-const preLoader = quizBox.querySelector('.pre-loader');
+const preLoader = document.querySelector('.pre-loader');
 const resultBox = document.querySelector('.result-box');
 const tryAgainBtn = resultBox.querySelector('.buttons-container .try-again');
 const checkYourAnswer = resultBox.querySelector('.check-answer');
+const checkAnswerBox = document.querySelector('.checkAnswer-box');
 
 
 let qCount, counter, counterLine, timeOut;
@@ -26,11 +27,19 @@ let userScore = 0;
 const timeValue = 15;
 let widthValue = 0;
 
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        preLoader.style.display = 'none';
+        categoriesBox.classList.add('activeCat');
+    }, 3000)
+});
+
 // If Start Quiz Button Clicked
 buttonsStartQuiz.forEach((btn) => {
     btn.addEventListener('click', () => {
         infoBox.classList.add('activeInfo');
         categoriesBox.classList.add('hide');
+        categoriesBox.classList.remove('activeCat');
         continueBtn.setAttribute('onclick', `continueButton("${btn.dataset.category}")`)
     });
 });
@@ -82,10 +91,6 @@ function getQuestions(selectedCategory) {
     }
     xhttp.open('GET', `questions/${selectedCategory}.questions.json`);
     xhttp.send();
-}
-
-tryAgainBtn.onclick = () => {
-    window.location.reload();
 }
 
 
@@ -207,7 +212,9 @@ function startTimer(time) {
         if (time < 0) {
             timeOff.textContent = 'Time Off';
             clearInterval(counter);
-            nextBtn.click();
+            if (qCount > currentIndex) {
+                nextBtn.click();
+            }
         }
     }
 }
@@ -268,4 +275,8 @@ function getAdvice(accuracy) {
         adv = "<strong>perfect!</strong> You can be proud of yourself!";
     }
     return adv;
+}
+
+tryAgainBtn.onclick = () => {
+    window.location.reload();
 }
