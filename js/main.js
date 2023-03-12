@@ -20,11 +20,11 @@ const checkYourAnswer = resultBox.querySelector('.check-answer');
 const checkAnswerBox = document.querySelector('.checkAnswer-box');
 
 
+const timeValue = 15;
 let qCount, counter, counterLine, timeOut;
 let cSelected;
 let currentIndex = 0;
 let userScore = 0;
-const timeValue = 15;
 let widthValue = 0;
 
 window.addEventListener('load', () => {

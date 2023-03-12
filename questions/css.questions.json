@@ -1,0 +1,171 @@
+[{
+        "num": 1,
+        "question": "What does CSS stand for?",
+        "answer_1": "Colorful Style Sheets",
+        "answer_2": "Cascading Style Sheets",
+        "answer_3": "Creative Style Sheets",
+        "answer_4": "Computer Style Sheets",
+        "right_anwser": "Cascading Style Sheets"
+    },
+    {
+        "num": 2,
+        "question": "What is the correct HTML for referring to an external style sheet?",
+        "answer_1": "<stylesheet>mystyle.css</stylesheet>",
+        "answer_2": "<link href=\"stylesheet\" rel=\"./css/style.css\">",
+        "answer_3": "<link rel=\"stylesheet\" type=\"text/css\" href=\"mystyle.css\">",
+        "answer_4": "<style src=\"mystyle.css\">",
+        "right_anwser": "<link rel=\"stylesheet\" type=\"text/css\" href=\"mystyle.css\">"
+    },
+    {
+        "num": 3,
+        "question": "Which HTML tag is used to define an internal style sheet?",
+        "answer_1": "<css>",
+        "answer_2": "<script>",
+        "answer_3": "<style>",
+        "answer_4": "<styleCss>",
+        "right_anwser": "<style>"
+    },
+    {
+        "num": 4,
+        "question": "Where in an HTML document is the correct place to refer to an external style sheet?",
+        "answer_1": "In the <body> section",
+        "answer_2": "In the <head> section",
+        "answer_3": "At the end of the document",
+        "answer_4": "Both the <head> section and the <body> section are correct ",
+        "right_anwser": "In the <head> section"
+    },
+    {
+        "num": 5,
+        "question": "Which HTML attribute is used to define inline styles?",
+        "answer_1": "style",
+        "answer_2": "font",
+        "answer_3": "class",
+        "answer_4": "styles",
+        "right_anwser": "style"
+    },
+    {
+        "num": 6,
+        "question": "Which is the correct CSS syntax?",
+        "answer_1": "{body:color=black;}",
+        "answer_2": "{body;color:black;}",
+        "answer_3": "body:color=black;",
+        "answer_4": "body {color: black;}  ",
+        "right_anwser": "body {color: black;}  "
+    },
+    {
+        "num": 7,
+        "question": "How do you insert a comment in a CSS file?",
+        "answer_1": "'this is a comment",
+        "answer_2": "// this is a comment",
+        "answer_3": "/* this is a comment */",
+        "answer_4": "// this is a comment //",
+        "right_anwser": "/* this is a comment */"
+    },
+    {
+        "num": 8,
+        "question": "Which property is used to change the background color?",
+        "answer_1": "bgcolor",
+        "answer_2": "color",
+        "answer_3": "background-color",
+        "answer_4": "backgroundColor",
+        "right_anwser": "<strong>"
+    },
+    {
+        "num": 9,
+        "question": "How do you add a background color for all <h1> elements?",
+        "answer_1": "h1 {background-color:#FFFFFF;}",
+        "answer_2": "h1.all {background-color:#FFFFFF;}",
+        "answer_3": "all.h1 {background-color:#FFFFFF;}",
+        "answer_4": "h1>all {background-color:#FFFFFF;}",
+        "right_anwser": "h1 {background-color:#FFFFFF;}"
+    },
+    {
+        "num": 10,
+        "question": "Which CSS property is used to change the text color of an element?",
+        "answer_1": "fgcolor",
+        "answer_2": "color",
+        "answer_3": "text-color",
+        "answer_4": "color-text",
+        "right_anwser": "color"
+    }, {
+        "num": 11,
+        "question": "Which CSS property controls the text size?",
+        "answer_1": "font-size  ",
+        "answer_2": "text-size",
+        "answer_3": "text-style",
+        "answer_4": "font-style",
+        "right_anwser": "font-size  "
+    }, {
+        "num": 12,
+        "question": "What is the correct CSS syntax for making all the <p> elements bold?",
+        "answer_1": "<p style=\"text-size:bold;\">",
+        "answer_2": "p {text-size:bold;}",
+        "answer_3": "p {font-weight:bold;}  ",
+        "answer_4": "<p style=\"font-size:bold;\">",
+        "right_anwser": "p {font-weight:bold;}  "
+    }, {
+        "num": 13,
+        "question": "How do you display hyperlinks without an underline?",
+        "answer_1": "a {decoration:no-underline;}",
+        "answer_2": "a {text-decoration:none;}",
+        "answer_3": "a {underline:none;}",
+        "answer_4": "a {text-decoration:no-underline;}",
+        "right_anwser": "a {text-decoration:none;}"
+    }, {
+        "num": 14,
+        "question": "How do you make each word in a text start with a capital letter?",
+        "answer_1": "text-style:capitalize",
+        "answer_2": "You can't do that with CSS",
+        "answer_3": "text-transform:capitalize",
+        "answer_4": "transform:capitalize",
+        "right_anwser": "text-transform:capitalize"
+    }, {
+        "num": 15,
+        "question": "How do you group selectors?",
+        "answer_1": "Separate each selector with a plus sign",
+        "answer_2": "Separate each selector with a space",
+        "answer_3": "Separate each selector with a comma",
+        "answer_4": "Separate each selector with a comma greater than",
+        "right_anwser": "Separate each selector with a comma"
+    }, {
+        "num": 16,
+        "question": "Which property is used to change the font of an element?",
+        "answer_1": "font-family",
+        "answer_2": "font-weight",
+        "answer_3": "font-style",
+        "answer_4": "font-text",
+        "right_anwser": "font-family"
+    }, {
+        "num": 17,
+        "question": "How do you make the text bold?",
+        "answer_1": "font-text:bold;",
+        "answer_2": "font-weight:bold;",
+        "answer_3": "font:bold;",
+        "answer_4": "style:bold;",
+        "right_anwser": "font-weight:bold;"
+    }, {
+        "num": 18,
+        "question": "How do you make a list that lists its items with squares?",
+        "answer_1": "list-style-type: square;",
+        "answer_2": "list: square;",
+        "answer_3": "list-type: square;",
+        "answer_4": "list-type-square: auto;",
+        "right_anwser": "list-style-type: square;"
+    }, {
+        "num": 19,
+        "question": "How do you select an element with id 'demo'?",
+        "answer_1": "*test",
+        "answer_2": "test",
+        "answer_3": "#test",
+        "answer_4": ".test",
+        "right_anwser": "#test"
+    }, {
+        "num": 20,
+        "question": "Which HTML element is used to specify a header for a document or section?",
+        "answer_1": "relative",
+        "answer_2": "static",
+        "answer_3": "absolute",
+        "answer_4": "fixed",
+        "right_anwser": "static"
+    }
+]

@@ -1,0 +1,171 @@
+[{
+        "num": 1,
+        "question": "What does PHP stand for?",
+        "answer_1": "Private Home Page",
+        "answer_2": "PHP: Hypertext Preprocessor",
+        "answer_3": "Personal Hypertext Processor",
+        "answer_4": "Preprocessed Hypertext Page",
+        "right_anwser": "PHP: Hypertext Preprocessor"
+    },
+    {
+        "num": 2,
+        "question": "How do you write \"Hello World\" in PHP",
+        "answer_1": "\"Hello World\";",
+        "answer_2": "Document.Write(\"Hello World\");",
+        "answer_3": "echo \"Hello World\";",
+        "answer_4": "printLn \"Hello World\";",
+        "right_anwser": "echo \"Hello World\";"
+    },
+    {
+        "num": 3,
+        "question": "What is the correct way to end a PHP statement?",
+        "answer_1": ".",
+        "answer_2": ";",
+        "answer_3": "</php>",
+        "answer_4": "New line",
+        "right_anwser": ";"
+    },
+    {
+        "num": 4,
+        "question": "The PHP syntax is most similar to:",
+        "answer_1": "Perl and C",
+        "answer_2": "VBScript",
+        "answer_3": "JavaScript",
+        "answer_4": "Java",
+        "right_anwser": "Perl and C"
+    },
+    {
+        "num": 5,
+        "question": "What is the correct way to include the file \"time.inc\" ?",
+        "answer_1": "<?php include file=\"time.inc\"; ?>",
+        "answer_2": "<?php include:\"time.inc\"; ?>",
+        "answer_3": "<!-- include file=\"time.inc\" -->",
+        "answer_4": "<?php include \"time.inc\"; ?>",
+        "right_anwser": "<?php include \"time.inc\"; ?>"
+    },
+    {
+        "num": 6,
+        "question": "What is the correct way to create a function in PHP?",
+        "answer_1": "create myFunction()",
+        "answer_2": "function:myFunction()",
+        "answer_3": "function myFunction()",
+        "answer_4": "function = myFunction()",
+        "right_anwser": "function myFunction()"
+    },
+    {
+        "num": 7,
+        "question": "What is the correct way to open the file \"time.txt\" as readable?",
+        "answer_1": "open(\"time.txt\",\"read\");",
+        "answer_2": "fopen(\"time.txt\",\"r\");",
+        "answer_3": "open(\"time.txt\");",
+        "answer_4": "fopen(\"time.txt\",\"r+\");",
+        "right_anwser": "fopen(\"time.txt\",\"r\");"
+    },
+    {
+        "num": 8,
+        "question": "Which superglobal variable holds information about headers, paths, and script locations?",
+        "answer_1": "$_SERVER",
+        "answer_2": "$_GET",
+        "answer_3": "$GLOBALS",
+        "answer_4": "$_SESSION",
+        "right_anwser": "$_SERVER"
+    },
+    {
+        "num": 9,
+        "question": "What is the correct way to add 1 to the $count variable?",
+        "answer_1": "++count",
+        "answer_2": "count++;",
+        "answer_3": "$count++;",
+        "answer_4": "$count =+1",
+        "right_anwser": "$count++;"
+    },
+    {
+        "num": 10,
+        "question": "What is a correct way to add a comment in PHP?",
+        "answer_1": "<!--...-->",
+        "answer_2": "/*...*/",
+        "answer_3": "*\/...\/*",
+        "answer_4": "<comment>...</comment>",
+        "right_anwser": "/*...*/"
+    }, {
+        "num": 11,
+        "question": "Which of the following is used to declare a constant",
+        "answer_1": "const",
+        "answer_2": "constant",
+        "answer_3": "define",
+        "answer_4": "#pragma",
+        "right_anwser": "define"
+    }, {
+        "num": 12,
+        "question": "Which of the following is the way to create comments in PHP?",
+        "answer_1": "// commented code to end of line",
+        "answer_2": "/* commented code here */",
+        "answer_3": "# commented code to end of line",
+        "answer_4": "all of the above",
+        "right_anwser": "all of the above"
+    }, {
+        "num": 13,
+        "question": "Which of the following is NOT a magic predefined constant?",
+        "answer_1": "__LINE__",
+        "answer_2": "__FILE__",
+        "answer_3": "__CLASS__",
+        "answer_4": "__DATE__",
+        "right_anwser": "__DATE__"
+    }, {
+        "num": 14,
+        "question": "What is the strpos() function used for?",
+        "answer_1": "Find the last character of a string",
+        "answer_2": "Both b and c",
+        "answer_3": "Search for character within a string",
+        "answer_4": "Locate position of a string  first character",
+        "right_anwser": "Search for character within a string"
+    }, {
+        "num": 15,
+        "question": "What is array_keys() used for?",
+        "answer_1": "Compares array keys, and returns the matches",
+        "answer_2": "Checks if the specified key exists in the array",
+        "answer_3": "Returns all the keys of an array ",
+        "answer_4": "Both b and c above",
+        "right_anwser": "Returns all the keys of an array "
+    }, {
+        "num": 16,
+        "question": "How do I create PHP arrays in a HTML <form>?",
+        "answer_1": "< input name=\"MyArray[]\" /> ",
+        "answer_2": "< input =\"MyArray[]\" />",
+        "answer_3": "< input name= MyArray[]/>",
+        "answer_4": "< input MyArray[] />",
+        "right_anwser": "< input name=\"MyArray[]\" /> "
+    }, {
+        "num": 17,
+        "question": "What is the default size of a file set in upload_max_filesize ?",
+        "answer_1": "1 MB",
+        "answer_2": "2 MB",
+        "answer_3": "2.5 MB",
+        "answer_4": "3 MB",
+        "right_anwser": "2 MB"
+    }, {
+        "num": 18,
+        "question": "What is the purpose of $_SESSION[]?",
+        "answer_1": "Used to register a global variable",
+        "answer_2": "Used to initialize a session.",
+        "answer_3": "Used to store variables of the current session",
+        "answer_4": "none of the above",
+        "right_anwser": "Used to store variables of the current session"
+    }, {
+        "num": 19,
+        "question": "How do you create a cookie in PHP?",
+        "answer_1": "createcookie",
+        "answer_2": "setcookie()",
+        "answer_3": "mkCookie()",
+        "answer_4": "createcookie",
+        "right_anwser": "setcookie()"
+    }, {
+        "num": 20,
+        "question": "Which one of these variables has an illegal name?",
+        "answer_1": "$myVar",
+        "answer_2": "$my-Var",
+        "answer_3": "$my_Var",
+        "answer_4": "$_myVar",
+        "right_anwser": "$my-Var"
+    }
+]

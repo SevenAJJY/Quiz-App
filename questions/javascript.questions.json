@@ -1,0 +1,171 @@
+[{
+        "num": 1,
+        "question": "Inside which HTML element do we put the JavaScript?",
+        "answer_1": "<scripting>",
+        "answer_2": "<script>",
+        "answer_3": "<javascript>",
+        "answer_4": "<js>",
+        "right_anwser": "<script>"
+    },
+    {
+        "num": 2,
+        "question": "Where is the correct place to insert a JavaScript?",
+        "answer_1": "Both the <head> section and the <body> section are correct",
+        "answer_2": "The <head> section",
+        "answer_3": "The <body> section",
+        "answer_4": "The <style> section",
+        "right_anwser": "Both the <head> section and the <body> section are correct"
+    },
+    {
+        "num": 3,
+        "question": "What is the correct syntax for referring to an external script called \"xxx.js\"?",
+        "answer_1": "<script src=\"xxx.js\">",
+        "answer_2": "<script name=\"xxx.js\">",
+        "answer_3": "<script href=\"xxx.js\">",
+        "answer_4": "<script source=\"xxx.js\">",
+        "right_anwser": "<script src=\"xxx.js\">"
+    },
+    {
+        "num": 4,
+        "question": "The external JavaScript file must contain the <script> tag.",
+        "answer_1": "True",
+        "answer_2": "False",
+        "answer_3": "It is better to do so",
+        "answer_4": "It is necessary to do so",
+        "right_anwser": "True"
+    },
+    {
+        "num": 5,
+        "question": "How do you write \"Hello World\" in an alert box?",
+        "answer_1": "alertBox(\"Hello World\");",
+        "answer_2": "alert(\"Hello World\");",
+        "answer_3": "msgBox(\"Hello World\");",
+        "answer_4": "msg(\"Hello World\");",
+        "right_anwser": "alert(\"Hello World\");"
+    },
+    {
+        "num": 6,
+        "question": "How do you create a function in JavaScript?",
+        "answer_1": "create myFunction()",
+        "answer_2": "function:myFunction()",
+        "answer_3": "function myFunction() ",
+        "answer_4": "function = myFunction()",
+        "right_anwser": "function myFunction() "
+    },
+    {
+        "num": 7,
+        "question": "How do you call a function named \"myFunction\"?",
+        "answer_1": "myFunction()",
+        "answer_2": "call function myFunction()",
+        "answer_3": "call myFunction()",
+        "answer_4": "myFunction().call",
+        "right_anwser": "myFunction()"
+    },
+    {
+        "num": 8,
+        "question": "How to write an IF statement in JavaScript?",
+        "answer_1": "if (i == 5)",
+        "answer_2": "if i = 5 then",
+        "answer_3": "if i == 5 then",
+        "answer_4": "if i = 5",
+        "right_anwser": "if (i == 5)"
+    },
+    {
+        "num": 9,
+        "question": "How does a WHILE loop start??",
+        "answer_1": "while (i <= 10)",
+        "answer_2": "while i = 1 to 10",
+        "answer_3": "while (i <= 10; i++)",
+        "answer_4": "while (let i = 0;i <= 10; i++)",
+        "right_anwser": "while (i <= 10)"
+    },
+    {
+        "num": 10,
+        "question": "How does a FOR loop start?",
+        "answer_1": "for (i = 0; i <= 5; i++)",
+        "answer_2": "for i = 1 to 5",
+        "answer_3": "for (i <= 5; i++)",
+        "answer_4": "for (i = 0; i <= 5)",
+        "right_anwser": "for (i = 0; i <= 5; i++)"
+    }, {
+        "num": 11,
+        "question": "How can you add a comment in a JavaScript?",
+        "answer_1": "//This is a comment",
+        "answer_2": "'This is a comment",
+        "answer_3": "<!--This is a comment-->",
+        "answer_4": "//This is a comment//",
+        "right_anwser": "//This is a comment"
+    }, {
+        "num": 12,
+        "question": "How to insert a comment that has more than one line?",
+        "answer_1": "/*This comment has more than one line*/",
+        "answer_2": "//This comment has more than one line//",
+        "answer_3": "<!--This comment has more than one line-->",
+        "answer_4": "//This comment has more than one line",
+        "right_anwser": "/*This comment has more than one line*/"
+    }, {
+        "num": 13,
+        "question": "What is the correct way to write a JavaScript array?",
+        "answer_1": "var colors = [\"red\", \"green\", \"blue\"]",
+        "answer_2": "var colors = \"red\", \"green\", \"blue\"",
+        "answer_3": "var colors = 1 = (\"red\"), 2 = (\"green\"), 3 = (\"blue\")",
+        "answer_4": "var colors = (1:\"red\", 2:\"green\", 3:\"blue\")",
+        "right_anwser": "var colors = [\"red\", \"green\", \"blue\"]"
+    }, {
+        "num": 14,
+        "question": "How do you round the number 7.25, to the nearest integer?",
+        "answer_1": "rnd(7.25)",
+        "answer_2": "Math.round(7.25)",
+        "answer_3": "Math.rnd(7.25)",
+        "answer_4": "round(7.25)",
+        "right_anwser": "Math.round(7.25)"
+    }, {
+        "num": 15,
+        "question": "How do you find the number with the highest value of x and y?",
+        "answer_1": "Math.ceil(x, y)",
+        "answer_2": "top(x, y)",
+        "answer_3": "ceil(x, y)",
+        "answer_4": "Math.max(x, y)",
+        "right_anwser": "Math.max(x, y)"
+    }, {
+        "num": 16,
+        "question": "Which event occurs when the user clicks on an HTML element?",
+        "answer_1": "onclick",
+        "answer_2": "onmouseclick",
+        "answer_3": "onchange",
+        "answer_4": "onmouseover",
+        "right_anwser": "onclick"
+    }, {
+        "num": 17,
+        "question": "Which operator is used to assign a value to a variable?",
+        "answer_1": "=",
+        "answer_2": "x",
+        "answer_3": "*",
+        "answer_4": "-",
+        "right_anwser": "="
+    }, {
+        "num": 18,
+        "question": "What will the following code return: Boolean(10 > 9)",
+        "answer_1": "True",
+        "answer_2": "False",
+        "answer_3": "NaN",
+        "answer_4": "Null",
+        "right_anwser": "True"
+    }, {
+        "num": 19,
+        "question": "Which of the following is a server-side Java Script object?",
+        "answer_1": "FileUpload",
+        "answer_2": "File",
+        "answer_3": "Date",
+        "answer_4": "Function",
+        "right_anwser": "File"
+    }, {
+        "num": 20,
+        "question": "Which of the following is not a valid JavaScript variable name?",
+        "answer_1": "2java",
+        "answer_2": "_java_and_ java _names",
+        "answer_3": "javaandjava",
+        "answer_4": "None of the above",
+        "right_anwser": "2java"
+    }
+]
