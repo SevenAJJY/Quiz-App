@@ -34,6 +34,8 @@ window.addEventListener('load', () => {
     }, 3000)
 });
 
+
+
 // If Start Quiz Button Clicked
 buttonsStartQuiz.forEach((btn) => {
     btn.addEventListener('click', () => {
@@ -220,12 +222,29 @@ function startTimer(time) {
 }
 
 function stratTimerLine(time) {
-    counterLine = setInterval(timer, 20);
+    const timeLineWidth = quizBox.offsetWidth;
+    let timeout;
+    if (timeLineWidth == 800) {
+        timeout = 20;
+    } else if (timeLineWidth == 650) {
+        timeout = 24;
+    } else if (timeLineWidth == 580) {
+        timeout = 27;
+    } else if (timeLineWidth == 450) {
+        timeout = 35;
+    } else if (timeLineWidth == 400) {
+        timeout = 40;
+    } else {
+        timeout = 46;
+    }
+    console.log(timeout);
+
+    counterLine = setInterval(timer, timeout);
 
     function timer() {
         time += 1;
         timeLine.style.width = `${time}px`;
-        if (time > 800) {
+        if (time > timeLineWidth) {
             clearInterval(counterLine);
         }
     }

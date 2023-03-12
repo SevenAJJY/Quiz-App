@@ -478,7 +478,7 @@ button.btn {
 
 .quiz-box {
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     background-color: var(--bg-white);
     border-radius: 6px;
@@ -668,6 +668,7 @@ span.checked:before {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 5px;
     padding: 30px;
 }
 
@@ -676,7 +677,6 @@ span.checked:before {
     height: 25px;
     background-color: var(--main-color-light);
     border-radius: 50%;
-    margin-right: 5px;
 }
 
 .g-quiz footer .spans span.on {
@@ -699,33 +699,6 @@ span.checked:before {
 
 
 /* End Quiz */
-
-
-/* Start Pre-laoder */
-
-
-/* .pre-loader {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    background-color: var(--bg-white);
-    border-radius: 6px;
-    opacity: 0;
-    pointer-events: none;
-    transform: translate(-50%, -50%) scale(0.5);
-    width: 700px;
-    transition: transform .5s ease;
-    overflow: hidden;
-}
-
-.pre-loader.activeLoader {
-    opacity: 1;
-    pointer-events: auto;
-    transform: translate(-50%, -50%) scale(1);
-} */
-
-
-/* End Pre-laoder */
 
 
 /* Start Result Box */
@@ -865,6 +838,170 @@ span.checked:before {
 
 
 /* Start Responsive */
+
+@media (max-width: 991px) {
+    /* Start quiz Box */
+    .quiz-box {
+        width: 650px;
+    }
+    .g-quiz section .question {
+        font-size: var(--fs-xl);
+    }
+    .g-quiz .option-list .answer span {
+        font-size: var(--fs-md);
+    }
+    /* End quizs Box */
+}
+
+@media (max-width: 767px) {
+    /* Start categories Box */
+    .category {
+        grid-column: span 6;
+    }
+    /* End categories Box */
+    /* Start quiz Box */
+    .quiz-box {
+        width: 580px;
+    }
+    .g-quiz section .question {
+        font-size: var(--fs-lg);
+    }
+    .g-quiz .option-list .answer span {
+        font-size: var(--fs-sm);
+    }
+    /* End quizs Box */
+    /* Start quiz Box */
+    .result-box {
+        width: 580px;
+    }
+    /* End quizs Box */
+}
+
+@media (max-width: 600px) {
+    /* Start categories Box */
+    .category {
+        grid-column: span 12;
+    }
+    /* Start info Box */
+    .info-box {
+        width: 450px;
+    }
+    .info-box .info-body .info {
+        font-size: var(--fs-sm);
+    }
+    /* End info Box */
+    /* Start quiz Box */
+    .quiz-box {
+        width: 450px;
+    }
+    .quiz-box .g-quiz header {
+        padding: 0 15px;
+    }
+    .g-quiz .option-list {
+        padding: 20px 0px 0 15px;
+    }
+    .quiz-box .g-quiz section {
+        padding: 15px 15px 0px;
+    }
+    .g-quiz footer {
+        padding: 0px 15px;
+    }
+    .g-quiz section .question {
+        font-size: var(--fs-lg);
+    }
+    .g-quiz .option-list .answer span {
+        font-size: var(--fs-sm);
+    }
+    /* End quizs Box */
+    /* Start quiz Box */
+    .result-box {
+        width: 450px;
+    }
+    /* End quizs Box */
+}
+
+@media (max-width: 480px) {
+    /* Start Section Title */
+    .title-box .section-title span {
+        font-size: var(--fs-xl);
+    }
+    /* End Section Title */
+    /* Start info Box */
+    .info-box {
+        width: 400px;
+    }
+    .info-box .info-body {
+        padding: 20px 25px;
+    }
+    .info-box .info-body .info {
+        font-size: var(--fs-sm);
+    }
+    /* End info Box */
+    /* Start quiz Box */
+    .quiz-box {
+        width: 400px;
+    }
+    .quiz-box .g-quiz header {
+        padding: 0 15px;
+    }
+    .quiz-box .g-quiz section {
+        padding: 15px 15px 0px;
+    }
+    .g-quiz .option-list .answer span {
+        padding: 10px 10px 10px 10px;
+    }
+    /* End quizs Box */
+    /* Start quiz Box */
+    .result-box {
+        width: 400px;
+    }
+    .quiz-result h3 {
+        font-size: var(--fs-xl);
+    }
+    .quiz-result .prog-accuracy div {
+        font-size: var(--fs-md);
+    }
+    .quiz-result .advice .advice-text p {
+        font-size: 13px;
+    }
+    /* End quizs Box */
+}
+
+@media (max-width: 390px) {
+    /* Start info Box */
+    .info-box {
+        width: 340px;
+    }
+    .info-box .info-header span {
+        font-size: var(--fs-lg);
+    }
+    /* End info Box */
+    /* Start quiz Box */
+    .quiz-box {
+        width: 340px;
+    }
+    .g-quiz section .question {
+        font-size: var(--fs-md);
+    }
+    .g-quiz .option-list .answer span {
+        font-size: 12px;
+    }
+    .g-quiz header .quiz-category div>span {
+        font-size: var(--fs-md);
+    }
+    /* End quizs Box */
+    /* Start quiz Box */
+    .result-box {
+        width: 340px;
+    }
+    .quiz-result {
+        padding: 0 5px;
+    }
+    .quiz-result .advice {
+        margin-bottom: 0px;
+    }
+    /* End quizs Box */
+}
 
 
 /* End Responsive */

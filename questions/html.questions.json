@@ -74,10 +74,10 @@
         "num": 9,
         "question": "What is the correct HTML for creating a hyperlink?",
         "answer_1": "<a>https://github.com/SevenAJJY</a>",
-        "answer_2": "<a url=\"https://github.com/SevenAJJY\">SevenAJJY</a>",
-        "answer_3": "<a name=\"https://github.com/SevenAJJY\">SevenAJJY</a>",
-        "answer_4": "<a href=\"https://github.com/SevenAJJY\">SevenAJJY</a>",
-        "right_anwser": "<a href=\"https://github.com/SevenAJJY\">SevenAJJY</a>"
+        "answer_2": "<a url=\"https://github.com/SevenAJJY\"> SevenAJJY</a>",
+        "answer_3": "<a name=\"https://github.com/SevenAJJY\"> SevenAJJY</a>",
+        "answer_4": "<a href=\"https://github.com/SevenAJJY\"> SevenAJJY</a>",
+        "right_anwser": "<a href=\"https://github.com/SevenAJJY\"> SevenAJJY</a>"
     },
     {
         "num": 10,
