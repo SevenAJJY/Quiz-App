@@ -52,6 +52,10 @@ body {
     height: 100vh;
 }
 
+body.noscroll-body {
+    overflow: hidden;
+}
+
 body.t-dark {
     /************ Text Colors *************/
     --text-x-dark-gray: hsl(0, 0%, 94%);
@@ -73,6 +77,9 @@ body.theme-codder {
     background-position: right bottom;
     background-size: 100% auto;
     background-repeat: no-repeat;
+    --hue: 39;
+    --satueation: 83%;
+    --lightness: 54%;
 }
 
 body.theme-squirrel {
@@ -80,6 +87,10 @@ body.theme-squirrel {
     background-position: right bottom;
     background-size: 100% auto;
     background-repeat: no-repeat;
+    --hue: 29;
+    --satueation: 100%;
+    --lightness: 50%;
+    --text-light-gray: hsl(0, 0%, 20%);
 }
 
 body.theme-eddie {
@@ -87,6 +98,8 @@ body.theme-eddie {
     background-position: right bottom;
     background-size: 100% auto;
     background-repeat: no-repeat;
+    --hue: 4;
+    --text-light-gray: hsl(0, 0%, 20%);
 }
 
 body.theme-early-birds {
@@ -94,6 +107,10 @@ body.theme-early-birds {
     background-position: right bottom;
     background-size: 100% auto;
     background-repeat: no-repeat;
+    --hue: 247;
+    --satueation: 74%;
+    --lightness: 64%;
+    --text-light-gray: hsl(0, 0%, 20%);
 }
 
 body.theme-penguin-land {
@@ -101,6 +118,8 @@ body.theme-penguin-land {
     background-position: right bottom;
     background-size: 100% auto;
     background-repeat: no-repeat;
+    --hue: 360;
+    --text-light-gray: hsl(0, 0%, 20%);
 }
 
 body.theme-kingfish {
@@ -108,6 +127,7 @@ body.theme-kingfish {
     background-position: right bottom;
     background-size: 100% auto;
     background-repeat: no-repeat;
+    --hue: 215;
 }
 
 body.theme-robot {
@@ -115,6 +135,7 @@ body.theme-robot {
     background-position: right bottom;
     background-size: 100% auto;
     background-repeat: no-repeat;
+    --hue: 180;
 }
 
 body.theme-bees {
@@ -122,6 +143,10 @@ body.theme-bees {
     background-position: right bottom;
     background-size: 100% auto;
     background-repeat: no-repeat;
+    --hue: 37;
+    --satueation: 85%;
+    --lightness: 54%;
+    --text-light-gray: hsl(0, 0%, 20%);
 }
 
 body.theme-taxi {
@@ -132,6 +157,25 @@ body.theme-taxi {
     --hue: 47;
     --satueation: 98%;
     --lightness: 58%;
+    --text-light-gray: hsl(0, 0%, 20%);
+}
+
+::selection {
+    color: var(--text-white);
+    background: var(--main-color);
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--body-bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
 }
 
 
@@ -180,8 +224,8 @@ a {
 /* Start pre-loader */
 
 .pre-loader {
-    position: relative;
-    z-index: 3;
+    position: absolute;
+    z-index: 100;
     height: 100%;
     width: 100%;
     display: flex;
@@ -282,7 +326,7 @@ a {
     top: 0;
     width: 100%;
     z-index: 2;
-    background: #fcf6c3;
+    background: var(--bg-color);
     text-align: center;
     box-shadow: 0 0 2px var(--main-color);
 }
@@ -302,7 +346,7 @@ a {
 .header .logo a span {
     font-size: 12px;
     font-weight: 500;
-    color: var(--text-light-gray);
+    color: var(--text-dark-gray);
     letter-spacing: 1px;
     text-align: center;
     position: relative;
@@ -315,7 +359,7 @@ a {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    border-top: 2px solid var(--text-light-gray);
+    border-top: 2px solid var(--text-dark-gray);
     border-right: 2px solid transparent;
     border-left: 0px solid transparent;
 }
@@ -325,7 +369,7 @@ a {
     position: absolute;
     top: -8px;
     right: -8px;
-    background: var(--text-light-gray);
+    background: var(--text-dark-gray);
     width: 8px;
     height: 8px;
     box-shadow: 0px 0px 5px var(--main-color);
@@ -352,7 +396,7 @@ a {
 .title-box .section-title span {
     display: inline-block;
     font-size: var(--fs-2xl);
-    font-weight: 500;
+    font-weight: 700;
     text-transform: capitalize;
     margin: 0 0 12px;
     padding: 0 40px;
@@ -849,7 +893,7 @@ span.checked:before {
     height: 130px;
     width: 130px;
     border-radius: 50%;
-    background: conic-gradient(var(--main-color) 3.6deg, #d9d9d9 0deg);
+    background: conic-gradient(var(--main-color) 3.6deg, var(--main-color-x-light) 0deg);
 }
 
 .quiz-result .prog-accuracy .circular-progress:before {

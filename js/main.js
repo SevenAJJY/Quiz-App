@@ -1,4 +1,5 @@
 // Getting All Required Elements
+const html = document.querySelector('html');
 const categoriesBox = document.querySelector('.categories-box');
 const infoBox = document.querySelector('.info-box');
 const quizBox = document.querySelector('.quiz-box');
@@ -18,6 +19,8 @@ const resultBox = document.querySelector('.result-box');
 const tryAgainBtn = resultBox.querySelector('.buttons-container .try-again');
 const checkYourAnswer = resultBox.querySelector('.check-answer');
 const checkAnswerBox = document.querySelector('.checkAnswer-box');
+const hueSlider = document.querySelector('.js-hue-slider');
+
 
 
 const timeValue = 15;
@@ -27,13 +30,15 @@ let currentIndex = 0;
 let userScore = 0;
 let widthValue = 0;
 
+
 window.addEventListener('load', () => {
+    noScrollBody();
     setTimeout(() => {
         preLoader.style.display = 'none';
         categoriesBox.classList.add('activeCat');
-    }, 3000)
+        document.body.classList.remove('noscroll-body');
+    }, 3000);
 });
-
 
 
 // If Start Quiz Button Clicked
@@ -43,13 +48,25 @@ buttonsStartQuiz.forEach((btn) => {
         categoriesBox.classList.add('hide');
         categoriesBox.classList.remove('activeCat');
         continueBtn.setAttribute('onclick', `continueButton("${btn.dataset.category}")`)
+        noScrollBody();
     });
 });
+
+const noScrollBody = () => {
+    if (categoriesBox.classList.contains('hide') || preLoader.style.display == '') {
+        document.body.classList.add('noscroll-body');
+    }
+}
+
 
 
 exitBtn.onclick = () => {
     infoBox.classList.remove('activeInfo');
     categoriesBox.classList.remove('hide');
+    categoriesBox.classList.add('activeCat');
+    if (categoriesBox.classList.contains('activeCat')) {
+        document.body.classList.remove('noscroll-body');
+    }
 }
 
 function continueButton(selectedCategory) {
@@ -276,7 +293,7 @@ function calcAccuracy() {
     function progEvent() {
         progValue.textContent = `${sVal}%`;
         sVal++;
-        circularProgress.style.background = `conic-gradient(var(--main-color) ${sVal * 3.6}deg, #d9d9d9  0deg)`;
+        circularProgress.style.background = `conic-gradient(var(--main-color) ${sVal * 3.6}deg, var(--main-color-x-light) 0deg)`;
         if (sVal > eVal) {
             clearInterval(progAcc);
         }
@@ -300,6 +317,7 @@ tryAgainBtn.onclick = () => {
     window.location.reload();
 }
 
+
 /**
  * Style Switcher 
  */
@@ -318,8 +336,6 @@ const styleSwitcherToggle = () => {
 
 
 const themeColor = () => {
-    const hueSlider = document.querySelector('.js-hue-slider');
-    const html = document.querySelector('html');
 
     const setHue = (value) => {
         html.style.setProperty('--hue', value);
@@ -384,20 +400,43 @@ const themeImages = () => {
 
             localStorage.setItem('t-img', `${imgSelected.dataset.item}`);
             themeImage();
-
         });
     });
 
     const themeImage = () => {
         if (localStorage.getItem('t-img') !== null) {
-            localStorage.removeItem('--HUE');
-            document.body.className = `theme-${localStorage.getItem('t-img')}`;
-            console.log(localStorage.getItem('t-img'));
-            // console.log(document.querySelector(`[data-item="${localStorage.getItem('t-img')}"]`));
+            arrayAllImages[0].classList.remove('selected');;
             document.querySelector(`[data-item="${localStorage.getItem('t-img')}"]`).classList.add('selected');
+            setClassesBody(localStorage.getItem('t-img'));
+            changeHue();
         }
     }
 
+    const setClassesBody = (classfromlocalStroage) => {
+        if (document.body.classList.contains('noscroll-body')) {
+            document.body.className = `noscroll-body theme-${classfromlocalStroage}`;
+        } else if (document.body.classList.contains('t-dark')) {
+            document.body.className = `t-dark theme-${classfromlocalStroage}`;
+        } else if (document.body.classList.contains('noscroll-body') && document.body.classList.contains('t-dark')) {
+            document.body.className = `noscroll-body t-dark theme-${classfromlocalStroage}`;
+        } else {
+            document.body.className = `theme-${classfromlocalStroage}`;
+        }
+
+    }
+
+    const changeHue = () => {
+        if (localStorage.getItem('t-img') !== null) {
+            let bodyTheme = document.querySelector(`.theme-${localStorage.getItem('t-img')}`);
+            const hue = getComputedStyle(bodyTheme).getPropertyValue('--hue');
+            window.localStorage.setItem('--HUE', hue);
+            html.style.setProperty('--hue', hue);
+            document.querySelector('.js-hue').textContent = hue;
+            hueSlider.value = hue;
+        }
+    }
+
+    themeImage();
 }
 
 themeImages();
