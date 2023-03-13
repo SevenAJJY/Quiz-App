@@ -370,6 +370,37 @@ const themeLightDark = () => {
     }
 }
 
+const themeImages = () => {
+    const allImages = document.querySelectorAll('.themes img');
+    const arrayAllImages = Array.from(allImages);
+
+    arrayAllImages.forEach((img) => {
+        img.addEventListener('click', () => {
+            arrayAllImages.forEach((img) => {
+                img.classList.remove('selected');
+            });
+            img.classList.add('selected');
+            const imgSelected = document.querySelector('.themes .selected');
+
+            localStorage.setItem('t-img', `${imgSelected.dataset.item}`);
+            themeImage();
+
+        });
+    });
+
+    const themeImage = () => {
+        if (localStorage.getItem('t-img') !== null) {
+            localStorage.removeItem('--HUE');
+            document.body.className = `theme-${localStorage.getItem('t-img')}`;
+            console.log(localStorage.getItem('t-img'));
+            // console.log(document.querySelector(`[data-item="${localStorage.getItem('t-img')}"]`));
+            document.querySelector(`[data-item="${localStorage.getItem('t-img')}"]`).classList.add('selected');
+        }
+    }
+
+}
+
+themeImages();
 styleSwitcherToggle();
 themeColor();
 themeLightDark();

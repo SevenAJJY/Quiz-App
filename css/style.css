@@ -44,7 +44,7 @@
 }
 
 body {
-    background: #0d1110 url('../imgs/codder.png');
+    background: #0d1110 url('../imgs/full-codder.png');
     background-position: right bottom;
     background-size: 100% auto;
     background-repeat: no-repeat;
@@ -64,6 +64,78 @@ body.t-dark {
     /************ shadow Colors *************/
     --shadow: 0 0 10px hsla(var(--hue), 19%, 7%, 0.9);
 }
+
+
+/* Start Themes */
+
+body.theme-codder {
+    background: #0d1110 url('../imgs/full-codder.png');
+    background-position: right bottom;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+body.theme-squirrel {
+    background: #d4f0ed url('../imgs/full-squirrel.png');
+    background-position: right bottom;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+body.theme-eddie {
+    background: #d1f1f6 url('../imgs/full-eddie.png');
+    background-position: right bottom;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+body.theme-early-birds {
+    background: #dde0f1 url('../imgs/early-birds.png');
+    background-position: right bottom;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+body.theme-penguin-land {
+    background: #f3dde4 url('../imgs/penguin-land.png');
+    background-position: right bottom;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+body.theme-kingfish {
+    background: #0b1626 url('../imgs/full-kingfish.png');
+    background-position: right bottom;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+body.theme-robot {
+    background: #141319 url('../imgs/full-robot.png');
+    background-position: right bottom;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+body.theme-bees {
+    background: #fcfcfc url('../imgs/full-bees.png');
+    background-position: right bottom;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+body.theme-taxi {
+    background: #fcf6c3 url('../imgs/yellow-taxi.png');
+    background-position: right bottom;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    --hue: 47;
+    --satueation: 98%;
+    --lightness: 58%;
+}
+
+
+/* End Themes */
 
 a {
     text-decoration: none;
@@ -210,7 +282,7 @@ a {
     top: 0;
     width: 100%;
     z-index: 2;
-    background: #0d1110;
+    background: #fcf6c3;
     text-align: center;
     box-shadow: 0 0 2px var(--main-color);
 }
@@ -871,7 +943,6 @@ span.checked:before {
     .g-quiz .option-list .answer span {
         font-size: var(--fs-md);
     }
-    /* End quizs Box */
 }
 
 @media (max-width: 767px) {
@@ -879,7 +950,6 @@ span.checked:before {
     .category {
         grid-column: span 6;
     }
-    /* End categories Box */
     /* Start quiz Box */
     .quiz-box {
         width: 580px;
@@ -890,12 +960,10 @@ span.checked:before {
     .g-quiz .option-list .answer span {
         font-size: var(--fs-sm);
     }
-    /* End quizs Box */
     /* Start quiz Box */
     .result-box {
         width: 580px;
     }
-    /* End quizs Box */
 }
 
 @media (max-width: 600px) {
@@ -910,7 +978,6 @@ span.checked:before {
     .info-box .info-body .info {
         font-size: var(--fs-sm);
     }
-    /* End info Box */
     /* Start quiz Box */
     .quiz-box {
         width: 450px;
@@ -933,12 +1000,10 @@ span.checked:before {
     .g-quiz .option-list .answer span {
         font-size: var(--fs-sm);
     }
-    /* End quizs Box */
     /* Start quiz Box */
     .result-box {
         width: 450px;
     }
-    /* End quizs Box */
 }
 
 @media (max-width: 480px) {
@@ -946,7 +1011,6 @@ span.checked:before {
     .title-box .section-title span {
         font-size: var(--fs-xl);
     }
-    /* End Section Title */
     /* Start info Box */
     .info-box {
         width: 400px;
@@ -957,7 +1021,6 @@ span.checked:before {
     .info-box .info-body .info {
         font-size: var(--fs-sm);
     }
-    /* End info Box */
     /* Start quiz Box */
     .quiz-box {
         width: 400px;
@@ -971,7 +1034,6 @@ span.checked:before {
     .g-quiz .option-list .answer span {
         padding: 10px 10px 10px 10px;
     }
-    /* End quizs Box */
     /* Start quiz Box */
     .result-box {
         width: 400px;
@@ -985,7 +1047,6 @@ span.checked:before {
     .quiz-result .advice .advice-text p {
         font-size: 13px;
     }
-    /* End quizs Box */
 }
 
 @media (max-width: 390px) {
@@ -996,7 +1057,6 @@ span.checked:before {
     .info-box .info-header span {
         font-size: var(--fs-lg);
     }
-    /* End info Box */
     /* Start quiz Box */
     .quiz-box {
         width: 340px;
@@ -1010,7 +1070,6 @@ span.checked:before {
     .g-quiz header .quiz-category div>span {
         font-size: var(--fs-md);
     }
-    /* End quizs Box */
     /* Start quiz Box */
     .result-box {
         width: 340px;
@@ -1021,7 +1080,6 @@ span.checked:before {
     .quiz-result .advice {
         margin-bottom: 0px;
     }
-    /* End quizs Box */
 }
 
 
