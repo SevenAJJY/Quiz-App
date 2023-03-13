@@ -408,7 +408,7 @@ a {
 .title-box .section-title span:after {
     content: "";
     position: absolute;
-    height: 1px;
+    height: 2px;
     width: 30px;
     background-color: var(--main-color);
     top: 50%;
@@ -457,6 +457,7 @@ a {
     justify-content: center;
     flex-direction: column;
     border-radius: 6px;
+    box-shadow: var(--shadow);
 }
 
 .category .quiz-header {
@@ -538,6 +539,7 @@ button.btn {
     transform: translate(-50%, -50%) scale(0.5);
     width: 540px;
     transition: transform .5s ease;
+    box-shadow: var(--shadow);
 }
 
 .info-box.activeInfo {
@@ -619,6 +621,7 @@ button.btn {
     width: 800px;
     transition: transform .5s ease;
     overflow: hidden;
+    box-shadow: var(--shadow);
 }
 
 .quiz-box.activeQuiz {
@@ -850,6 +853,7 @@ span.checked:before {
     width: 700px;
     transition: transform .5s ease;
     overflow: hidden;
+    box-shadow: var(--shadow);
 }
 
 .result-box.activeResult {
@@ -1090,6 +1094,12 @@ span.checked:before {
     }
     .quiz-result .advice .advice-text p {
         font-size: 13px;
+    }
+    .quiz-result .advice {
+        margin-bottom: 0;
+    }
+    .quiz-result .prog-accuracy {
+        padding: 5px 20px 20px;
     }
 }
 
