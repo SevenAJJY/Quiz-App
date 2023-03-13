@@ -44,12 +44,13 @@
 }
 
 body {
-    background: #0d1110 url('../imgs/full-codder.png');
+    background: #0d1110;
     background-position: right bottom;
     background-size: 100% auto;
     background-repeat: no-repeat;
     font-family: 'Poppins', sans-serif;
     height: 100vh;
+    transition: all .3s ease;
 }
 
 body.noscroll-body {
