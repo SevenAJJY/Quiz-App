@@ -56,6 +56,15 @@ const noScrollBody = () => {
     if (categoriesBox.classList.contains('hide') || preLoader.style.display == '') {
         document.body.classList.add('noscroll-body');
     }
+
+    const reportWindowSize = () => {
+        console.log(window.innerWidth);
+        if (window.innerWidth === 480 || !categoriesBox.classList.contains('hide') || preLoader.style.display != '') {
+            document.body.classList.remove('noscroll-body');
+        }
+    }
+    window.addEventListener('resize', reportWindowSize);
+
 }
 
 
