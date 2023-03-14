@@ -56,16 +56,16 @@ const noScrollBody = () => {
     if (categoriesBox.classList.contains('hide') || preLoader.style.display == '') {
         document.body.classList.add('noscroll-body');
     }
-
-    const reportWindowSize = () => {
-        console.log(window.innerWidth);
-        if (window.innerWidth === 480 || !categoriesBox.classList.contains('hide') || preLoader.style.display != '') {
-            document.body.classList.remove('noscroll-body');
-        }
-    }
-    window.addEventListener('resize', reportWindowSize);
-
 }
+
+
+const reportWindowSize = () => {
+    if (window.innerWidth < 480 || window.innerHeight < 660) {
+        document.body.classList.remove('noscroll-body');
+        console.log('yes');
+    }
+}
+window.addEventListener('resize', reportWindowSize);
 
 
 
@@ -263,7 +263,6 @@ function stratTimerLine(time) {
     } else {
         timeout = 46;
     }
-    console.log(timeout);
 
     counterLine = setInterval(timer, timeout);
 
