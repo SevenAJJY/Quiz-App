@@ -62,7 +62,6 @@ const noScrollBody = () => {
 const reportWindowSize = () => {
     if (window.innerWidth < 480 || window.innerHeight < 660) {
         document.body.classList.remove('noscroll-body');
-        console.log('yes');
     }
 }
 window.addEventListener('resize', reportWindowSize);
@@ -250,23 +249,20 @@ function startTimer(time) {
 }
 
 function stratTimerLine(time) {
-    const timeLineWidth = quizBox.offsetWidth;
-    let timeout;
-    if (timeLineWidth == 800) {
-        timeout = 20;
-    } else if (timeLineWidth == 650) {
-        timeout = 24;
-    } else if (timeLineWidth == 580) {
-        timeout = 27;
-    } else if (timeLineWidth == 450) {
-        timeout = 35;
-    } else if (timeLineWidth == 400) {
-        timeout = 40;
-    } else {
-        timeout = 46;
-    }
+    let timeLineWidth = quizBox.offsetWidth;
+    const widths = {
+        'width_800': 20,
+        'width_650': 24,
+        'width_580': 27,
+        'width_450': 35,
+        'width_400': 40,
+    };
 
-    counterLine = setInterval(timer, timeout);
+    const getTimeOut = (eWidth) => {
+        return widths[`width_${eWidth}`] ? widths[`width_${eWidth}`] : 48;
+    };
+
+    counterLine = setInterval(timer, getTimeOut(timeLineWidth));
 
     function timer() {
         time += 1;
