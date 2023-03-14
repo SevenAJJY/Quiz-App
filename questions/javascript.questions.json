@@ -10,19 +10,19 @@
     {
         "num": 2,
         "question": "Where is the correct place to insert a JavaScript?",
-        "answer_1": "Both the <head> section and the <body> section are correct",
+        "answer_1": "The <body> section",
         "answer_2": "The <head> section",
-        "answer_3": "The <body> section",
+        "answer_3": "Both the <head> section and the <body> section are correct",
         "answer_4": "The <style> section",
         "right_anwser": "Both the <head> section and the <body> section are correct"
     },
     {
         "num": 3,
         "question": "What is the correct syntax for referring to an external script called \"xxx.js\"?",
-        "answer_1": "<script src=\"xxx.js\">",
+        "answer_1": "<script source=\"xxx.js\">",
         "answer_2": "<script name=\"xxx.js\">",
         "answer_3": "<script href=\"xxx.js\">",
-        "answer_4": "<script source=\"xxx.js\">",
+        "answer_4": "<script src=\"xxx.js\">",
         "right_anwser": "<script src=\"xxx.js\">"
     },
     {
@@ -55,44 +55,44 @@
     {
         "num": 7,
         "question": "How do you call a function named \"myFunction\"?",
-        "answer_1": "myFunction()",
+        "answer_1": "myFunction().call",
         "answer_2": "call function myFunction()",
         "answer_3": "call myFunction()",
-        "answer_4": "myFunction().call",
+        "answer_4": "myFunction()",
         "right_anwser": "myFunction()"
     },
     {
         "num": 8,
         "question": "How to write an IF statement in JavaScript?",
-        "answer_1": "if (i == 5)",
+        "answer_1": "if i == 5 then",
         "answer_2": "if i = 5 then",
-        "answer_3": "if i == 5 then",
+        "answer_3": "if (i == 5)",
         "answer_4": "if i = 5",
         "right_anwser": "if (i == 5)"
     },
     {
         "num": 9,
         "question": "How does a WHILE loop start??",
-        "answer_1": "while (i <= 10)",
+        "answer_1": "while (i <= 10; i++)",
         "answer_2": "while i = 1 to 10",
-        "answer_3": "while (i <= 10; i++)",
+        "answer_3": "while (i <= 10)",
         "answer_4": "while (let i = 0;i <= 10; i++)",
         "right_anwser": "while (i <= 10)"
     },
     {
         "num": 10,
         "question": "How does a FOR loop start?",
-        "answer_1": "for (i = 0; i <= 5; i++)",
-        "answer_2": "for i = 1 to 5",
+        "answer_1": "for i = 1 to 5",
+        "answer_2": "for (i = 0; i <= 5; i++)",
         "answer_3": "for (i <= 5; i++)",
         "answer_4": "for (i = 0; i <= 5)",
         "right_anwser": "for (i = 0; i <= 5; i++)"
     }, {
         "num": 11,
         "question": "How can you add a comment in a JavaScript?",
-        "answer_1": "//This is a comment",
+        "answer_1": "<!--This is a comment-->",
         "answer_2": "'This is a comment",
-        "answer_3": "<!--This is a comment-->",
+        "answer_3": "//This is a comment",
         "answer_4": "//This is a comment//",
         "right_anwser": "//This is a comment"
     }, {
@@ -106,9 +106,9 @@
     }, {
         "num": 13,
         "question": "What is the correct way to write a JavaScript array?",
-        "answer_1": "var colors = [\"red\", \"green\", \"blue\"]",
+        "answer_1": "var colors = 1 = (\"red\"), 2 = (\"green\"), 3 = (\"blue\")",
         "answer_2": "var colors = \"red\", \"green\", \"blue\"",
-        "answer_3": "var colors = 1 = (\"red\"), 2 = (\"green\"), 3 = (\"blue\")",
+        "answer_3": "var colors = [\"red\", \"green\", \"blue\"]",
         "answer_4": "var colors = (1:\"red\", 2:\"green\", 3:\"blue\")",
         "right_anwser": "var colors = [\"red\", \"green\", \"blue\"]"
     }, {
@@ -146,9 +146,9 @@
     }, {
         "num": 18,
         "question": "What will the following code return: Boolean(10 > 9)",
-        "answer_1": "True",
+        "answer_1": "NaN",
         "answer_2": "False",
-        "answer_3": "NaN",
+        "answer_3": "True",
         "answer_4": "Null",
         "right_anwser": "True"
     }, {

@@ -147,6 +147,8 @@ function getCategoryName(name) {
 function loaderButton(selectedCategory) {
     document.querySelector(".loader-btn").onclick = () => {
         nextBtn.innerHTML = "<div class='loader'></div>";
+        nextBtn.style.cursor = "not-allowed";
+
         timeOut = setTimeout(() => {
             // Quiz completed
             showResult(selectedCategory);
